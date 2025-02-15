@@ -1,0 +1,38 @@
+/* BusRouteCards.css */
+
+.bus-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default 3 columns */
+  gap: 20px; /* Spacing between cards */
+  padding: 10px 20px 20px 20px;
+  margin-top: 62px;
+}
+
+/* Media query for smaller screens (below 420px) */
+@media (max-width: 420px) {
+  .bus-card-container {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}
+
+.bus-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bus-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.bus-card p {
+  margin-bottom: 8px;
+}
+
+.bus-card .description {
+  font-style: italic;
+  color: #777;
+}

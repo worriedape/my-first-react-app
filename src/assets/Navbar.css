@@ -1,0 +1,93 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex; /* Use flexbox for layout */
+  width: 100%;
+  min-width: 320px;
+  justify-content: space-between; /* Space logo and links apart */
+  align-items: center; /* Vertically align items in the navbar */
+  padding: 15px 20px; /* Spacing inside the navbar */
+  background-color: #f0f0f0; /* Example background color */
+}
+
+.navbar-logo a {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none; /* Remove underline from link */
+}
+
+.navbar-links {
+  list-style: none; /* Remove bullet points from list */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Arrange links horizontally */
+}
+
+.navbar-links li {
+  margin-left: 20px; /* Spacing between links */
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #555;
+  padding: 8px 12px;
+  border-radius: 5px; /* Optional: Rounded corners for links */
+}
+
+.navbar-links li a:hover {
+  background-color: #ddd; /* Hover effect */
+}
+
+.hamburger-icon {
+  display: none; /* Initially hidden on larger screens */
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+  .navbar {
+    position: fixed; /* Make navbar fixed at the top or bottom */
+    top: 0; /* Or bottom: 0; if you want it at the bottom */
+    left: 0;
+    width: 100%;
+    transition: transform 0.7s ease; /* Smooth transition for hiding/showing */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+
+  .navbar-hidden {
+    transform: translateY(
+      -100%
+    ); /* Slide navbar off screen to hide (for top navbar) */
+    /* transform: translateY(100%); /!* Slide navbar off screen to hide (for bottom navbar) *!/  Use this if navbar is at the bottom */
+  }
+
+  .navbar-links {
+    display: none; /* Hide links by default on narrow screens */
+    flex-direction: column; /* Stack links vertically when menu is open */
+    position: absolute; /* Position menu below navbar */
+    top: 100%; /* Align top of menu with bottom of navbar */
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0; /* Match navbar background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Shadow for menu */
+    padding: 10px 20px;
+  }
+
+  .navbar-links.active {
+    /* Styles when hamburger menu is open */
+    display: flex; /* Show links when active class is present */
+  }
+
+  .navbar-links li {
+    margin-left: 0; /* Remove horizontal spacing in vertical menu */
+    margin-bottom: 10px; /* Add vertical spacing in vertical menu */
+  }
+
+  .hamburger-icon {
+    display: block; /* Show hamburger icon on narrow screens */
+  }
+}
