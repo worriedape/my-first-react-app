@@ -1,46 +1,44 @@
-/* Navbar.css */
-
 .navbar {
-  display: flex; /* Use flexbox for layout */
+  display: flex; 
   width: 100%;
   min-width: 320px;
-  justify-content: space-between; /* Space logo and links apart */
-  align-items: center; /* Vertically align items in the navbar */
-  padding: 15px 20px; /* Spacing inside the navbar */
-  background-color: #f0f0f0; /* Example background color */
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 15px 20px; 
+  background-color: #f0f0f0; 
 }
 
 .navbar-logo a {
   font-size: 1.5em;
   font-weight: bold;
   color: #333;
-  text-decoration: none; /* Remove underline from link */
+  text-decoration: none; 
 }
 
 .navbar-links {
-  list-style: none; /* Remove bullet points from list */
+  list-style: none; 
   padding: 0;
   margin: 0;
-  display: flex; /* Arrange links horizontally */
+  display: flex; 
 }
 
 .navbar-links li {
-  margin-left: 20px; /* Spacing between links */
+  margin-left: 20px; 
 }
 
 .navbar-links li a {
   text-decoration: none;
   color: #555;
   padding: 8px 12px;
-  border-radius: 5px; /* Optional: Rounded corners for links */
+  border-radius: 5px; 
 }
 
 .navbar-links li a:hover {
-  background-color: #ddd; /* Hover effect */
+  background-color: #ddd; 
 }
 
 .hamburger-icon {
-  display: none; /* Initially hidden on larger screens */
+  display: none; 
   background: none;
   border: none;
   font-size: 1.5em;

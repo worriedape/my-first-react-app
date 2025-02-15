@@ -23,6 +23,7 @@ function App() {
     <>
       <NavBar placement="top" menuItems={menuItems} />
       <BusRouteCards />
+      <NavBar placement="bottom" menuItems={menuItems} />
     </>
   );
 }

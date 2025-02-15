@@ -28,7 +28,7 @@ const NavBar = React.memo(function NavBar({ placement = "top", menuItems }) {
       if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
       scrollTimeout.current = setTimeout(() => {
         setVisible(true);
-      }, 200);
+      }, 1);
     }
 
     lastScrollY.current = currentScrollY;
